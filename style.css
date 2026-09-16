@@ -1,0 +1,13 @@
+:root { --navy:#17325c; --blue:#2f6fb0; --light:#f4f7fb; --border:#d8e0eb; --text:#1e2936; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Arial,sans-serif; color:var(--text); background:var(--light); }
+.container { max-width:850px; margin:auto; padding:42px 20px; }
+header { margin-bottom:22px; }.eyebrow { color:var(--blue); font-size:.8rem; font-weight:bold; letter-spacing:1.4px; margin:0 0 7px; }
+h1,h2 { color:var(--navy); } h1 { margin:0; font-size:2.2rem; } h2 { margin-top:0; font-size:1.2rem; }.subtitle,.note { color:#607084; }
+nav { display:flex; gap:8px; margin-bottom:18px; }.tab { background:white; color:var(--navy); border:1px solid var(--border); }.tab.active { background:var(--navy); color:white; }
+.card { background:white; border:1px solid var(--border); border-radius:10px; padding:22px; margin-bottom:18px; box-shadow:0 2px 8px #17325c0d; }
+.stock-list { display:flex; flex-wrap:wrap; gap:10px; }.stock-item,.admin-item { background:#eaf2fb; color:var(--navy); padding:10px 14px; border-radius:6px; font-weight:bold; }
+.admin-item { display:flex; justify-content:space-between; align-items:center; margin:8px 0; } form { display:grid; grid-template-columns:repeat(3,1fr) auto; gap:14px; align-items:end; }
+label { font-size:.9rem; font-weight:bold; display:grid; gap:6px; } input,select,button { font:inherit; border-radius:6px; padding:10px; } input,select { border:1px solid var(--border); width:100%; }
+button { background:var(--navy); border:1px solid var(--navy); color:white; cursor:pointer; font-weight:bold; } button:hover { background:var(--blue); }.return-button { padding:7px 10px; background:var(--blue); border-color:var(--blue); }.message { min-height:20px; font-weight:bold; }.success { color:#19703a; }.error { color:#b42318; }.hidden { display:none; }.table-wrap { overflow-x:auto; } table { border-collapse:collapse; width:100%; } th,td { border-bottom:1px solid var(--border); padding:12px 8px; text-align:left; } th { color:var(--navy); }.empty { color:#607084; text-align:center; }
+@media(max-width:650px){form{grid-template-columns:1fr} form button{width:100%;}}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College AV Room</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">COLLEGE AV ROOM</p>
+      <h1>Equipment Rental</h1>
+      <p class="subtitle">Student borrowing and simple admin management.</p>
+    </header>
+
+    <nav>
+      <button class="tab active" data-view="studentView">Student</button>
+      <button class="tab" data-view="adminView">Admin</button>
+    </nav>
+
+    <section id="studentView" class="view">
+      <section class="card">
+        <h2>Available equipment</h2>
+        <div id="stockList" class="stock-list"></div>
+      </section>
+      <section class="card">
+        <h2>Borrow equipment</h2>
+        <form id="borrowForm">
+          <label>Student name<input id="studentName" required placeholder="Enter your name" /></label>
+          <label>Equipment<select id="equipment" required></select></label>
+          <label>Return date<input id="dueDate" type="date" required /></label>
+          <button type="submit">Borrow item</button>
+        </form>
+        <p id="message" class="message"></p>
+      </section>
+    </section>
+
+    <section id="adminView" class="view hidden">
+      <section class="card">
+        <h2>Admin: active loans</h2>
+        <p class="note">This demo has no login. In a real system, protect this page with admin authentication.</p>
+        <div class="table-wrap"><table><thead><tr><th>Student</th><th>Item</th><th>Due date</th><th>Action</th></tr></thead><tbody id="loanList"></tbody></table></div>
+      </section>
+      <section class="card">
+        <h2>Admin: transfer a loan</h2>
+        <p class="note">The due date stays the same and equipment availability does not change.</p>
+        <form id="transferForm">
+          <label>Active loan<select id="transferLoan" required></select></label>
+          <label>New borrower<input id="newBorrower" required placeholder="Enter new student name" /></label>
+          <button type="submit">Transfer loan</button>
+        </form>
+      </section>
+      <section class="card">
+        <h2>Admin: equipment stock</h2>
+        <div id="adminStock"></div>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
